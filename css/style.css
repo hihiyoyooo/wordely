@@ -2,3 +2,18 @@
 @import "header.css";
 @import "main.css";
 @import "footer.css";
+
+@keyframes 정답_애니메이션 {
+  from {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes 오답_애니메이션 {
+  0% {
+    background-color: #787c7e;
+  }
+  50% {
+    background-color: #c9b458;
+  }
+}
