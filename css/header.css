@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  height: 50px;
+}
+
+h1 {
+  font-size: 30px;
+  padding-left: 70px;
+  font-weight: bold;
+}
+.top_icons img {
+  width: 30px;
+  height: 30px;
+}
