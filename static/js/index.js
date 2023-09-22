@@ -1,5 +1,3 @@
-const 정답 = "SNAKE";
-
 let attempts = 0;
 let index = 0;
 let timer;
@@ -25,9 +23,17 @@ function appStart() {
     index = 0;
   };
 
-  const handleEnterKey = () => {
+  const handleEnterKey = async () => {
     let 맞은_갯수 = 0;
     const keyboardColumns = Array.from(document.querySelectorAll(".key-block"));
+
+    // 서버에서 정답을 받아오는 코드
+    // await을 사용하여 서버에서 오는 응답을 기다린다.
+    const 응답 = await fetch("/answer");
+
+    // json: JavaScript에 맞는 포멧으로 변경한다.
+    // await을 사용하여 변경한 응답을 기다린다.
+    const 정답 = await 응답.json();
 
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
